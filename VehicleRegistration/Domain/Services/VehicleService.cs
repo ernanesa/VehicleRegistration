@@ -11,20 +11,17 @@ public class VehicleService(VehicleRegistrationContext context) : IVehicleServic
     public List<Vehicle> GetAll(int page, int pageSize, string name = null, string brand = null, int? year = null)
     {
         var vehicles = _context.Vehicles.AsQueryable();
-        
-        if(!string.IsNullOrEmpty(name)) vehicles = vehicles.Where(v => v.Name.Contains(name));
-        if(!string.IsNullOrEmpty(brand)) vehicles = vehicles.Where(v => v.Brand.Contains(brand));
-        if(year.HasValue) vehicles = vehicles.Where(v => v.Year == year);
-        
+
+        if (!string.IsNullOrEmpty(name)) vehicles = vehicles.Where(v => v.Name.Contains(name));
+        if (!string.IsNullOrEmpty(brand)) vehicles = vehicles.Where(v => v.Brand.Contains(brand));
+        if (year.HasValue) vehicles = vehicles.Where(v => v.Year == year);
+
         return vehicles.Skip((page - 1) * pageSize).Take(pageSize).ToList();
     }
 
     public Vehicle GetById(int id)
     {
-        var vehicle = _context.Vehicles.FirstOrDefault(v => v.Id == id);
-        
-        if(vehicle == null)  throw new Exception("Vehicle not found");
-        
+        var vehicle = _context.Vehicles.FirstOrDefault(v => v.Id == id) ?? throw new Exception("Vehicle not found");
         return vehicle;
     }
 
