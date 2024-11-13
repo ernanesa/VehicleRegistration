@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRegistration", "VehicleRegistration.csproj", "{A49ACF20-D001-4F21-8E92-BF0BB3FCD0E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRegistration.Tests", "..\VehicleRegistration.Tests\VehicleRegistration.Tests.csproj", "{12993BCA-5999-4A56-A635-1CAB12EDE6A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A49ACF20-D001-4F21-8E92-BF0BB3FCD0E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A49ACF20-D001-4F21-8E92-BF0BB3FCD0E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A49ACF20-D001-4F21-8E92-BF0BB3FCD0E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A49ACF20-D001-4F21-8E92-BF0BB3FCD0E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12993BCA-5999-4A56-A635-1CAB12EDE6A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12993BCA-5999-4A56-A635-1CAB12EDE6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12993BCA-5999-4A56-A635-1CAB12EDE6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12993BCA-5999-4A56-A635-1CAB12EDE6A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
