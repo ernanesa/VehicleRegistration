@@ -34,7 +34,8 @@ public class VehicleService(VehicleRegistrationContext context) : IVehicleServic
 
     public Vehicle Update(Vehicle vehicle)
     {
-        _context.Vehicles.Update(vehicle);
+        var existingVehicle = GetById(vehicle.Id);
+        _context.Entry(existingVehicle).CurrentValues.SetValues(vehicle);
         _context.SaveChanges();
         return vehicle;
     }
